@@ -5,6 +5,19 @@ import PackageDescription
 
 let version = "7.8.1"
 
+enum Checksums {
+    static let iDenfyInternalLoggerChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let iDenfyDocRecognitionChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let idengineChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let FaceTecSDKChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let iDenfyLivenessChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let idenfyviewsChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let iDenfySDKChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let idenfycoreChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let idenfyNFCReadingChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+    static let openSSLChecksum = "277951881ccfb9e0148684b0c761d20104ca642dc4fc756877a2eb19df52d86b"
+}
+
 let package = Package(
     name: "iDenfyRecognition",
     platforms: [.iOS(.v11)],
@@ -145,24 +158,24 @@ let package = Package(
         ),
         // Binaries
         .binaryTarget(name: "iDenfyInternalLogger",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfyInternalLogger.zip", checksum: "15ff62df5108652ba971afe9297608c916455307e700b3cbe4ffcc25996cd10b"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfyInternalLogger.zip", checksum: Checksums.iDenfyInternalLoggerChecksum),
         .binaryTarget(name: "iDenfyDocRecognition",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfyDocRecognition.zip", checksum: "eae66ef11b5dfc90dc3aeaec1d7201d98e040870c14daf57f8cfbd773f70094d"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfyDocRecognition.zip", checksum: Checksums.iDenfyDocRecognitionChecksum),
         .binaryTarget(name: "idengine",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idengine.zip", checksum: "45fef35fc6a19cc3663008595998f7c6fc04f16f7ecd9c11acb6f1d2f8bcadfd"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idengine.zip", checksum: Checksums.idengineChecksum),
         .binaryTarget(name: "FaceTecSDK",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/FaceTecSDK.zip", checksum: "1dea0b0a264d224f5f7911022a5ba09083ecccc21260f629c3de64c21fcae84d"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/FaceTecSDK.zip", checksum: Checksums.FaceTecSDKChecksum),
         .binaryTarget(name: "IdenfyLiveness",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/IdenfyLiveness.zip", checksum: "0a3533b4a696d506e80adb1becae415aeb810f0eb969537346a019d0a4b37c1b"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/IdenfyLiveness.zip", checksum: Checksums.iDenfyLivenessChecksum),
         .binaryTarget(name: "idenfyviews",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfyviews.zip", checksum: "fa04d465e4fe09896fc0e177e8b7bfc34adb54745ce10135d971cd5a05a84269"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfyviews.zip", checksum: Checksums.idenfyviewsChecksum),
         .binaryTarget(name: "iDenfySDK",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfySDK.zip", checksum: "95327ef368ed622d89e086aa5dba0ec0a3b59bc6a12b1c8b34935422062857e2"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/iDenfySDK.zip", checksum: Checksums.iDenfySDKChecksum),
         .binaryTarget(name: "idenfycore",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfycore.zip", checksum: "6437511dee3ffadf4f904b19f93a41bfc836ac40a244e0231c76b35fd92b1ec9"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfycore.zip", checksum: Checksums.idenfycoreChecksum),
         .binaryTarget(name: "idenfyNFCReading",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfyNFCReading.zip", checksum: "37924da25e121a084ed75b998d7066de092165ebc1dcea01468f85931d9daf95"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/idenfyNFCReading.zip", checksum: Checksums.idenfyNFCReadingChecksum),
         .binaryTarget(name: "OpenSSL",
-                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/OpenSSL.zip", checksum: "37c29448bd21212f71465611213e6cf87cabb5774da916444ce61c100f04d3f0"),
+                      url: "https://s3.eu-west-1.amazonaws.com/sdk.builds/ios-sdk/\(version)/spm/IdenfyRecognition/OpenSSL.zip", checksum: Checksums.openSSLChecksum),
     ]
 )
