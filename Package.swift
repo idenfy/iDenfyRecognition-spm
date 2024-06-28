@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "8.5.0"
+let version = "8.5.1"
 
 enum Checksums {
     static let iDenfyInternalLoggerChecksum = "05128ffcbbf9f9259e1d995bc344ac75018c9c7a5fc612fe717a73f94cc61d56"
